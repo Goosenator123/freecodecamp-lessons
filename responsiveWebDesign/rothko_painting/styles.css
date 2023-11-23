@@ -1,0 +1,51 @@
+/* Elements styles */
+.frame {
+    width: 500px;
+    border: 50px solid black;
+    padding: 50px;
+    margin: 20px auto;
+}
+
+.canvas {
+    width: 500px;
+    height: 600px;
+    background-color: #4d0f00;
+    /* padding: 1px; */
+    overflow: hidden; /*! Make sure the margin of its content work without increaseing its size like padding */
+    filter: blur(2px);
+}
+
+.one {
+    width: 425px;
+    height: 150px;
+    background-color: #efb762;
+    margin: 20px auto;
+    box-shadow: 0 0 3px 3px #efb762;
+    border-radius: 9px;
+    transform: rotate(-0.6deg);
+}
+
+.two {
+    width: 475px;
+    height: 200px;
+    background-color: #8f0401;
+    margin: 0 auto 20px; /* margin: top horizontale bottom; */
+    box-shadow: 0 0 3px 3px #8f0401;
+    border-radius: 8px 10px; /* border-radius: (topleft-bottomright) (topright-bottomleft); */
+    transform: rotate(0.4deg);
+}
+
+.one, .two {
+    filter: blur(1px);
+}
+
+.three {
+    width: 91%;
+    height: 28%;
+    background-color: #b20403;
+    margin: auto;
+    box-shadow: 0 0 5px 5px #b20403;
+    border-radius: 30px 25px 60px 12px; /* border-radius: topleft topright bottomleft bottomright; */
+    filter: blur(2px);
+    transform: rotate(-0.2deg);
+}
