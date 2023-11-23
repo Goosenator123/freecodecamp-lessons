@@ -1,0 +1,62 @@
+/* Global styles */
+* /* Set the property to all element */ {
+    box-sizing: border-box; /* Unlike content-box, it includes content, padding, and border when height and width properties are speicified */
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+
+/*! Testing css */
+/* .gallery {
+    width: 50%;
+    border: 5px solid red;
+} */
+
+/* img {
+    width: 100%;
+    padding: 5px;
+    border: 5px solid blue;
+} */
+/*! */
+
+/* Header styles */
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-direction: row; /* How your items are positioned */
+    flex-wrap: wrap; /* How your items behave when your container is too small */
+    justify-content: center; /* How the items inside a flex container are positioned along the main axis (horizontally) */
+    align-items: center; /* How the items inside a flex container are positioned along the cross axis (vertically) */
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px; /* Set a gap in between each items */
+}
+
+.gallery::after /* Creates a element that is the last child of the selected element */{
+    content: ""; /* Set the content of the child element */
+    width: 350px;
+}
+
+/* Gallery img styles */
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover; /* Maintaining aspect ratio by cropping to fit container */
+    border-radius: 10px;
+}
+
+
