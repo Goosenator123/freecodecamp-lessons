@@ -43,6 +43,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     gap: 16px; /* Set a gap in between each items */
+    background-color: #3b3b4f;
 }
 
 .gallery::after /* Creates a element that is the last child of the selected element */{
