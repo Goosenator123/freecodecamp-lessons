@@ -1,0 +1,144 @@
+/* Global styling for the body element */
+body {
+    /* Background image for the body */
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    
+    /* Font family for the entire document */
+    font-family: sans-serif;
+    
+    /* Padding around the content within the body */
+    padding: 20px;
+}
+
+/* Heading styling for h1 and h2 */
+h1 {
+    /* Font size for h1 */
+    font-size: 40px;
+    
+    /* Margin settings for h1 */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    /* Font size for h2 */
+    font-size: 30px;
+}
+
+/* Center align text for h1, h2, and p elements */
+h1, h2, p {
+    text-align: center;
+}
+
+/* Font family and styling for h1 and h2 */
+h1, h2 {
+    font-family: Impact, serif;
+}
+
+/* Styling for horizontal rule (hr) */
+hr {
+    /* Height and color settings for hr */
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+/* Styling for the main menu */
+.menu {
+    /* Width and maximum width settings for the menu */
+    width: 80%;
+    max-width: 500px;
+    
+    /* Background color for the menu */
+    background-color: burlywood;
+    
+    /* Center align the menu with margin settings */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Padding around the menu content */
+    padding: 20px;
+}
+
+/* Styling for item paragraphs within the menu */
+.item p {
+    /* Display setting for item paragraphs */
+    display: inline-block;
+    
+    /* Font size and margin settings for item paragraphs */
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Styling for flavor and dessert classes within the menu */
+.flavor, .dessert {
+    /* Text align and width settings for flavor and dessert classes */
+    text-align: left;
+    width: 75%;
+}
+
+/* Styling for price class within the menu */
+.price {
+    /* Text align and width settings for price class */
+    text-align: right;
+    width: 25%;
+}
+
+/* Styling for the "established" class with italic font style */
+.established {
+    font-style: italic;
+}
+
+/* Styling for the bottom line, separating content from footer */
+.bottom-line {
+    /* Margin setting for the bottom line */
+    margin-top: 25px;
+}
+
+/* Styling for images within the document */
+img {
+    /* Display setting to center the image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Adjusting the margin from the top */
+    margin-top: -25px;
+}
+
+/* Styling for the footer section */
+footer {
+    /* Font size for the footer */
+    font-size: 14px;
+}
+
+/* Styling for the address class within the footer */
+.address {
+    /* Margin setting for the address class */
+    margin-bottom: 5px;
+}
+
+/* Styling for anchor (link) elements */
+a {
+    /* Color setting for unvisited links */
+    color: black;
+}
+
+/* Styling for visited links */
+a:visited {
+    /* Color setting for visited links */
+    color: black;
+}
+
+/* Styling for link hover state */
+a:hover {
+    /* Color setting for link hover state */
+    color: brown;
+}
+
+/* Styling for active link state */
+a:active {
+    /* Color setting for active link state */
+    color: brown;
+}
