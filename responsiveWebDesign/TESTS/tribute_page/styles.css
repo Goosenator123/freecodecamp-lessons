@@ -1,0 +1,82 @@
+/* Global styles */
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    line-height: 1.5;
+    font-size: 1.6rem; /*! 1rem = 1x root em */
+}
+
+/* Main styles */
+#main {
+    width: 100%;
+    margin: 10px auto;
+    background-color: #eee;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+/* Tribute titles styles */
+#title {
+    font-size: 4rem;
+    /* font-weight: 700; */
+}
+
+/* Image section styles */
+#img-div {
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+#image {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 50%;
+    margin: 0 auto;
+}
+
+#img-caption {
+    /* font-weight: ; */
+    margin: 5px 0 0 0;
+}
+
+/* Info section styles */
+#headline {
+    margin: 40px auto;
+}
+
+ul {
+    max-width: 540px;
+    margin: auto;
+}
+
+li {
+    font-size: 1.6rem;
+    margin: 16px 0;
+}
+
+/* Quote styles */
+blockquote {
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: left;
+    color: #686868;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+/* All purpose styles */
+.bold {
+    font-weight: 800;
+}
+
+.left {
+    text-align: left;
+}
