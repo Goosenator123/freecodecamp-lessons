@@ -1,0 +1,86 @@
+/*! Global styles */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+
+/*! Styles for span elements with sr-only class */
+span[class~="sr-only"] {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px); /* Define visible portions of the element */
+    clip-path: inset(50%); /* Determine the shape of the clip property should take */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+}
+
+/*! Elements styles */
+h1 {
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+/* Target the elements with class="flex" in h1 */
+h1 .flex {
+    display: flex; /* Create flex container  */
+    flex-direction: column-reverse; /* Reversed column */
+    gap: 1rem; /* Set gap between elements */
+}
+
+/*!  Select the first span element in the .flex container in h1 */
+h1 .flex span:first-of-type {
+    font-size: 0.7em; /* the 2nd element is changed because the elements are reversed by flex-direction: column-reverse; */
+}
+
+/* Code below can do the same as the one above and below by changing the value of n */
+/* h1 .flex span:nth-of-type(1 or 2) {
+    font-size: 0.7em;
+} */
+
+/*! Select the last span element in the .flex container in h1 */
+h1 .flex span:last-of-type {
+    font-size: 1.2em; /* the 1st element is changed because the elements are reversed by flex-direction: column-reverse; */
+}
+
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+#years {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    background-color: #0a0a23;
+    z-index: 999;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /* calc() function is a CSS function that allows you to calculate a value based on other values */
+
+    /* .example {
+      margin: 10px;
+      width: calc(100% - 20px);
+    } */
+}
+
+/* Targets span elements with class attribute set in #years */
+#years span[class] {
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
