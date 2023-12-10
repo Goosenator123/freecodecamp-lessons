@@ -1,0 +1,118 @@
+/* Global styles */
+html {
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+/*! Title styles */
+#page-header h1 {
+    background-color: gray;
+    position: relative;
+    margin-left: auto;
+    width: 66.66666%;
+    font-size: 6rem;
+    text-align: center;
+    transition: font-size 0.3s ease-out;
+}
+
+/*!Navigation bar styles */
+#navbar {
+    background: gray;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 33.333333%;
+    height: 100vh;
+    padding: 20px;
+}
+
+nav header h2{
+    text-align: center;
+    font-size: 5rem;
+    transition: font-size 0.3s ease-out;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 4rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.nav-sub-link {
+    color: black;
+    font-size: 3rem;
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-left: 1em;
+}
+
+/*! Main page styles */
+#main-doc {
+    background-color: gray;
+    box-sizing: border-box;
+    position: relative;
+    width: 66.66666%;
+    margin-left: auto;
+    padding: 50px;
+    font-size: 2.5rem;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 6rem;
+    transition: font-size 0.3s ease-out;
+}
+
+.sub-title {
+    font-size: 4rem;
+    transition: font-size 0.3s ease-out;
+}
+
+/* Lists styles */
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/*! Other styles */
+.divider {
+    border-bottom: 2px solid black;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Media Query */
+/* @media(max-width: 945px) {
+    #page-header h1{
+        font-size: 3.5rem;
+    }
+
+    nav header h2, .main-section header h1{
+        font-size: 3rem;
+    }
+} */
+
+@media (prefers-reduced-motion: no-preference){ /* Check if user prefers reduced motion */
+    * {
+        scroll-behavior: smooth;
+    }
+}
