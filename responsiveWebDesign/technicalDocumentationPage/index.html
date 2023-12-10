@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation Page</title>
+
     <!-- Linked css file -->
     <link rel="stylesheet" href="./styles.css">
+
     <!-- Linked google icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
+
+    <!-- Main Title -->
     <header id="page-header">
-        <h1>Technical Documentation Page</h1>
+        <h1>Programming Languages Documentation</h1>
     </header>
 
+    <!-- Navigation bar (side) -->
     <nav id="navbar">
 
-        <!-- Title -->
+        <!-- Nav Title -->
         <header>
             <h2>Quick Links</h2>
         </header>
 
-        <!--! HTML nav -->
+        <!--! HTML main nav -->
         <div class="main-nav divider">
             <a href="#html" class="nav-link">HTML</a>
             <button class="nav-button" id="html-button">
@@ -31,6 +37,7 @@
             </button>
         </div>
 
+        <!-- HTML sub nav -->
         <div class="sub-nav" id="html-sub-nav">
             <a href="#html-overview" class="nav-sub-link divider">Overview</a>
             <a href="#html-purpose/role" class="nav-sub-link divider">Purpose and Role in Web Development</a>
@@ -41,7 +48,7 @@
             <a href="#html5-feature" class="nav-sub-link divider">HTML5 Feature</a>
         </div>
 
-        <!--! CSS nav -->
+        <!--! CSS main nav -->
         <div class="main-nav divider">
             <a href="#css" class="nav-link">CSS</a>
             <button class="nav-button">
@@ -51,7 +58,9 @@
             </button>
         </div>
 
-        <!--! Javascript -->
+        <!-- TODO CSS sub nav -->
+
+        <!--! Javascript main nav -->
         <div class="main-nav divider">
             <a href="#javascript" class="nav-link">Javascript</a>
             <button class="nav-button">
@@ -61,7 +70,9 @@
             </button>
         </div>
 
-        <!--! Python -->
+        <!-- TODO Javascript sub nav -->
+
+        <!--! Python main nav -->
         <div class="main-nav divider">
             <a href="#python" class="nav-link">Python</a>
             <button class="nav-button">
@@ -71,7 +82,9 @@
             </button>
         </div>
 
-        <!--! C++ -->
+        <!-- TODO Python sub nav -->
+
+        <!--! C++ main nav -->
         <div class="main-nav divider">
             <a href="#C++" class="nav-link">C++</a>
             <button class="nav-button">
@@ -81,6 +94,8 @@
             </button>
         </div>
 
+        <!-- TODO C++ sub nav -->
+        
     </nav>
     
     <main id="main-doc">
@@ -93,861 +108,981 @@
                 <h1 class="main-title">HTML</h1>
             </header>
 
-            <!-- Overview -->
-            <h2 class="sub-title" id="html-overview">Overview of HTML</h2>
-            <p>
-                <span class="bold">HTML</span>, or HyperText Markup Language, is the standard markup language used to create and structure content on the web. It forms the backbone of web development by providing a set of elements and tags that define the structure of a web page. HTML documents are comprised of a series of elements, each represented by tags, which enclose content and define its purpose.
+
+            <!-- -----------Overview---------- -->
+            <article id="html-overview">
+
+                <!-- Subtitle & Description -->
+                <h2 class="sub-title">Overview of HTML</h2>
+                <p>
+                    <span class="bold">HTML</span>, or HyperText Markup Language, is the standard markup language used to create and structure content on the web. It forms the backbone of web development by providing a set of elements and tags that define the structure of a web page. HTML documents are comprised of a series of elements, each represented by tags, which enclose content and define its purpose.
+                    <br>
+                    <br>
+                    HTML uses a tree-like structure, where elements nest within each other to create a hierarchy. This structure allows for the organization and presentation of text, images, links, forms, and multimedia on a webpage.
+                </p>
+            </article>
+
+
+            <!-- ----------Purpose and Role in Web Development---------- -->
+            <article id="html-purpose/role">
+
+                <!-- Subtitle & Description -->
+                <h2 class="sub-title">Purpose and Role in Web Development</h2>
+                <p>
+                    The primary purpose of HTML is to provide a standardized way to create and organize content on the World Wide Web. It serves as the fundamental building block for constructing web pages and is essential for the following reasons:
+                </p>
+
+                <ol>
+                    <li>
+                        <span class="bold">Structure and Semantics:</span>
+                        HTML defines the structure of a document using tags that represent headings, paragraphs, lists, tables, and more. It also incorporates semantic elements to provide meaning to the content, aiding accessibility and search engine optimization.
+                    </li>
+
+                    <li>
+                        <span class="bold">Cross-Browser Compatibility:</span>
+                        HTML ensures consistency in rendering content across various web browsers. This is crucial for delivering a uniform user experience regardless of the browser or device being used.
+                    </li>
+
+                    <li>
+                        <span class="bold">Integration with Other Technologies:</span>
+                        HTML seamlessly integrates with CSS (Cascading Style Sheets) for styling and layout, as well as JavaScript for dynamic behavior and interactivity. Together, these technologies form the core trio for modern web development.
+                    </li>
+
+                    <li>
+                        <span class="bold">Accessibility:</span>
+                        By using semantic HTML and adhering to best practices, developers can create accessible web content that is navigable and understandable by people with disabilities, such as those using screen readers.
+                    </li>
+
+                    <li>
+                        <span class="bold">Evolution with HTML5:</span>
+                        The HTML standard continually evolves to accommodate new features and technologies. HTML5, the latest version, introduces enhancements like the <span class="bold">canvas</span> element for graphics, <span class="bold">video</span> and <span class="bold">audio</span> elements for multimedia, and <span class="bold">localStorage</span> element for client-side data storage.
+                    </li>
+                </ol>
+            </article>
+            
+
+            <!-- ----------HTML Document Structure---------- -->
+            <article id="html-document-structure">
+
+                <!-- Subtitle & Description -->
+                <h2 class="sub-title">Document Structure</h2>
+                <p>
+                    HTML (Hypertext Markup Language) is the standard language for creating and designing web pages. An HTML document consists of various elements that define the structure and content of a webpage.
+                </p>
+    
                 <br>
+    
+                <!-- Document Structure section -->
+                <span class="bold">Document Structure Overview:</span>
+                <ol>
+                    <li>
+                        <span class="bold">
+                            &lt;!DOCTYPE html&gt; Declaration:<br>
+                        </span>
+                        <ul>
+                            <li>
+                                Specifies the document type and version of HTML. For HTML5, it is usually 
+                                <span class="bold">&lt;!DOCTYPE html&gt;</span>.
+                            </li>
+                        </ul>
+
+                        <code>
+                            &lt;!DOCTYPE html&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            &lt;html&gt; Element: <br>
+                        </span>
+                        <ul>
+                            <li>The root element that encapsulates the entire HTML document.</li>
+                        </ul>
+
+                        <code>
+                            &lt;html&gt; <br>
+                            <span class="indent">&lt;!-- html elements go here --&gt;<br></span>
+                            &lt;/html&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            &lt;head&gt; Element: <br>
+                        </span>
+                        <ul>
+                            <li>Contains metadata and links to external resources, such as stylesheets and scripts.</li>
+                        </ul>
+
+                        <code>
+                            &lt;head&gt; <br>
+                            <span class="indent">&lt;title&gt;Page title &lt;/title&gt;</span> <br>
+                            <span class="indent">&lt;meta charset="UTF-8"&gt; </span> <br>
+                            <span class="indent">&lt;link rel="stylesheet" href="styles.css"&gt;</span> <br>
+                            &lt;/head&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            &lt;body&gt; Section <br>
+                        </span>
+                        <ul>
+                            <li>Contains the content of the HTML document, including text, images, links, and other elements.</li>
+                        </ul>
+
+                        <code>
+                            &lt;body&gt; <br>
+                            <span class="indent">&lt;h1&gt; Hello World! &lt;/h1&gt; <br></span>
+                            <span class="indent">&lt;p&gt; This is a simple message &lt;/p&gt; <br></span>
+                            &lt;/body&gt;
+                        </code>
+                    </li>
+                </ol>
+    
                 <br>
-                HTML uses a tree-like structure, where elements nest within each other to create a hierarchy. This structure allows for the organization and presentation of text, images, links, forms, and multimedia on a webpage.
-            </p>
+    
+                <!-- Head Section -->
+                <span class="bold">Head Section:</span>
 
-            <!-- Purpose and Role in Web Development -->
-            <h2 class="sub-title" id="html-purpose/role">Purpose and Role in Web Development</h2>
-            <p>
-                The primary purpose of HTML is to provide a standardized way to create and organize content on the World Wide Web. It serves as the fundamental building block for constructing web pages and is essential for the following reasons:
-            </p>
-            <ol>
-                <li>
-                    <span class="bold">Structure and Semantics:</span>
-                    HTML defines the structure of a document using tags that represent headings, paragraphs, lists, tables, and more. It also incorporates semantic elements to provide meaning to the content, aiding accessibility and search engine optimization.
-                </li>
-                <li>
-                    <span class="bold">Cross-Browser Compatibility:</span>
-                     HTML ensures consistency in rendering content across various web browsers. This is crucial for delivering a uniform user experience regardless of the browser or device being used.
-                </li>
-                <li>
-                    <span class="bold">Integration with Other Technologies:</span>
-                    HTML seamlessly integrates with CSS (Cascading Style Sheets) for styling and layout, as well as JavaScript for dynamic behavior and interactivity. Together, these technologies form the core trio for modern web development.
-                </li>
-                <li>
-                    <span class="bold">Accessibility:</span>
-                    By using semantic HTML and adhering to best practices, developers can create accessible web content that is navigable and understandable by people with disabilities, such as those using screen readers.
-                </li>
-                <li>
-                    <span class="bold">Evolution with HTML5:</span>
-                    The HTML standard continually evolves to accommodate new features and technologies. HTML5, the latest version, introduces enhancements like the <span class="bold">canvas</span> element for graphics, <span class="bold">video</span> and <span class="bold">audio</span> elements for multimedia, and <span class="bold">localStorage</span> element for client-side data storage.
-                </li>
-            </ol>
+                <!-- Description -->
+                <p>
+                    The <span class="bold">&lt;head&gt;</span> section is used to provide meta-information and include external resources that enhance the presentation and functionality of the webpage. Key elements within the <span class="bold">&lt;head&gt;</span> section include:
+                </p>
+    
+                <ul>
+                    <li>
+                        <span class="bold">
+                            &lt;title&gt; Element:
+                        </span>
+                        <ul>
+                            <li>Sets the title of the HTML document, which is displayed on the browser tab or window.</li>
+                        </ul>
+
+                        <code>
+                            &lt;title&gt;Page Title&lt;/title&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            &lt;meta&gt; Element:
+                        </span>
+                        <ul>
+                            <li>Provides metadata, such as character set, viewport settings, or other information.</li>
+                        </ul>
+
+                        <code>
+                            &lt;meta charset="UTF-8"&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            &lt;link&gt; Element:
+                        </span>
+                        <ul>
+                            <li>Links external resources, such as stylesheets or icon files.</li>
+                        </ul>
+
+                        <code>
+                            &lt;link rel="stylesheet" href="styles.css"&gt;
+                        </code>
+                    </li>
+                </ul>
+    
+                <br>
+                
+                <!-- Body Section -->
+                <span class="bold">Body Section:</span>
+
+                <!-- Description -->
+                <p>
+                    The <span class="bold">&lt;body&gt;</span> section contains the actual content of the HTML document, visible to users when they visit the webpage. Key elements within the <span class="bold">&lt;body&gt;</span> section include:
+                </p>
+    
+                <ul>
+                    <li>
+                        <span class="bold">
+                            Headings: (&lt;h1&gt; to &lt;h6&gt;):
+                        </span>
+                        <ul>
+                            <li>
+                                Define hierarchical headings with <span class="bold">&lt;h1&gt;</span> being the highest level and <span class="bold">&lt;h6&gt;</span> the lowest.
+                            </li>
+                        </ul>
+
+                        <code>
+                            &lt;h1&gt;Main Heading&lt;/h1&gt;
+                            <br>
+                            &lt;h6&gt;Subheading&lt;/h6&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Paragraphs (&lt;p&gt;):
+                        </span>
+                        <ul>
+                            <li>Create paragraphs of text.</li>
+                        </ul>
+
+                        <code>
+                            &lt;p&gt;This is a paragraph of text&lt;/p&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Links (&lt;a&gt;):
+                        </span>
+                        <ul>
+                            <li>Create hyperlinks to navigate to other web pages.</li>
+                        </ul>
+
+                        <code>
+                            &lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Images (&lt;img&gt;):
+                        </span>
+                        <ul>
+                            <li>Embed images into the document.</li>
+                        </ul>
+
+                        <code>
+                            &lt;img src="image.jpg" alt="Description of the image"&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;):
+                        </span>
+                        <ul>
+                            <li>Create unordered or ordered lists with list items.</li>
+                        </ul>
+
+                        <code>
+                            &lt;ul&gt; <br>
+                            <span class="indent">
+                                &lt;li&gt;Item 1&lt;/li&gt; <br>
+                            </span>
+                            <span class="indent">
+                                &lt;li&gt;Item 2&lt;/li&gt; <br>
+                            </span>
+                            &lt;ul&gt; <br>
+    
+                            <br>
+    
+                            &lt;ol&gt; <br>
+                            <span class="indent">
+                                &lt;li&gt;First&lt;/li&gt; <br>
+                            </span>
+                            <span class="indent">
+                                &lt;li&gt;Second&lt;/li&gt; <br>
+                            </span>
+                            &lt;ol&gt; <br>
+                        </code>
+                    </li>
+                </ul>
+
+                <!-- Summary -->
+                <p>
+                    This documentation provides an overview of the HTML document structure, the purpose of the <span class="bold">&lt;head&gt;</span> and <span class="bold">&lt;body&gt;</span> sections, and key elements within each section. The actual content and structure of an HTML document may vary based on the specific requirements of the webpage.
+                </p>
+            </article>
+
+
+            <!-- ----------Forms and Input Elements---------- -->
+            <article id="form-input-elements">
+
+                <!-- Subtitle & Desription -->
+                <h2 class="sub-title">Forms and Input Elements</h2>
+                <p>
+                    HTML provides a set of elements to create forms, collect user input, and facilitate interaction on web pages. The following documentation covers form elements, input types, attributes, and validation
+                </p>
+    
+                <br>
+    
+                <!-- Forms section -->
+                <span class="bold">Form Element (&lt;form&gt;):</span>
+
+                <!-- Description -->
+                <p>The <span class="bold">&lt;form&gt;</span> element is used to create an HTML form that allows users to input data.</p>
+    
+                <br>
+    
+                <!-- Attributes -->
+                <span class="bold">Attributes</span>
+                <ul>
+                    <li>
+                        <span class="bold">
+                            action (optional):<br>
+                        </span>
+                        <ul>
+                            <li>Specifies the URL to which the form data should be submitted.</li>
+                            <li>Example: <span class="bold">&lt;form action="/submit" method="post"&gt;</span></li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            method (optional):<br>
+                        </span>
+                        <ul>
+                            <li>Specifies the HTTP method for sending form data (e.g., "get" or "post").</li>
+                            <li>Example: <span class="bold">&lt;form action="/submit" method="post"&gt;</span></li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            target (optional):<br>
+                        </span>
+                        <ul>
+                            <li>Specifies where to display the response after submitting the form (e.g., "_blank" for a new tab).</li>
+                            <li>Example: <span class="bold">&lt;form action="/submit" method="post" target="_blank"&gt;</span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <br>
+
+                <!-- Usage -->
+                <span class="bold">Usage:</span>
+                <p>Form example:</p>
+    
+                <code>
+                    &lt;form action="/submit" method="post"&gt; <br>
+                        <span class="indent">&lt;!-- Form elements go here --&gt;<br></span>
+                    &lt;/form&gt;
+                </code>
+
+                <br>
+    
+                <!-- Input section -->
+                <span class="bold">Input Elements (&lt;input&gt;):</span>
+
+                <!-- Description -->
+                <p>The <span class="bold">&lt;input&gt;</span> element is a versatile element used to create various types of form controls.</p>
+
+                <br>
+    
+                <span class="bold">Common Attributes:</span>
+                <ul>
+                    <li>
+                        <span class="bold">type:<br></span>
+                        <ul>
+                            <li>Specifies the type of input control (e.g., text, password, checkbox).<br></li>
+                            <li>Example: <span class="bold">&lt;input type="text"&gt;</span></li>
+                        </ul>    
+                    </li>
+
+                    <li>
+                        <span class="bold">name:<br></span>
+                        <ul>
+                            <li>Assigns a name to the input control, used when submitting form data.<br></li>
+                            <li>Example: <span class="bold">&lt;input type="text" name="username"&gt;</span></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span class="bold">value:<br></span>
+                        <ul>
+                            <li>Sets the initial or default value of the input control.<br></li>
+                            <li>Example: <span class="bold">&lt;input type="text" value="John Doe"&gt;</span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <br>
+
+                <!-- Types -->
+                <span class="bold">Input Types:</span>
+                <ol>
+                    <li>
+                        <span class="bold">
+                            Text Input (type="text"):
+                        </span>
+                        <code>
+                            &lt;input type="text" name="username" placeholder="Enter your username"&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Password Input (type="password"):
+                        </span>
+                        <code>
+                            &lt;input type="password" name="password" placeholder="Enter your password"&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Checkbox (type="checkbox"):
+                        </span>
+                        <code>
+                            &lt;input type="checkbox" name="subscribe" value="yes"&gt; Subscribe to newsletter
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Radio (type="radio"):
+                        </span>
+                        <code>
+                            &lt;input type="radio" name="gender" value="male"&gt; Male
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            Submit Button (type="submit"):
+                        </span>
+                        <code>
+                            &lt;input type="radio" name="gender" value="female"&gt; Female
+                        </code>
+                    </li>
+                </ol>
+                
+                <br>
+
+                <!-- Validation -->
+                <span class="bold">Validation:</span>
+
+                <!-- Description -->
+                <p>HTML5 introduces native form validation using attributes like <span class="bold">required, pattern, and more</span>.</p>
+
+                <ul>
+                    <li>
+                        <span class="bold">
+                            required:
+                        </span>
+                        <ul>
+                            <li>Specifies that the input field must be filled out before submitting the form.</li>
+                        </ul>
+
+                        <code>
+                              &lt;input type="text" name="fullname" required&gt;          
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">
+                            pattern:
+                        </span>
+                        <ul>
+                            <li>Specifies a regular expression pattern that the input value must match.</li>
+                        </ul>
+
+                        <code>
+                            &lt;input type="text" name="zipcode" pattern="[0-9]{5}" title="Enter a valid 5-digit zip code"&gt;
+                        </code>
+                    </li>
+                </ul>
+
+                <!-- Summary -->
+                <p>
+                    This documentation provides an overview of the <span class="bold">&lt;form&gt;</span> element, common attributes for <span class="bold">&lt;input&gt;</span> elements, various input types, and basic form validation using HTML attributes. For more advanced validation and behavior, JavaScript can be employed.
+                </p>
+            </article>
             
-            <br>
 
-            <!-- HTML Document Structure -->
-            <h2 class="sub-title" id="html-document-structure">Document Structure</h2>
-            <p>
-                HTML (Hypertext Markup Language) is the standard language for creating and designing web pages. An HTML document consists of various elements that define the structure and content of a webpage.
-            </p>
-
-            <br>
-
-            <span class="bold">Document Structure Overview:</span>
-            <ol>
-                <li>
-                    <span class="bold">
-                        &lt;!DOCTYPE html&gt; Declaration:<br>
-                    </span>
-                    <ul>
-                        <li>
-                            Specifies the document type and version of HTML. For HTML5, it is usually 
-                            <span class="bold">&lt;!DOCTYPE html&gt;</span>.
-                        </li>
-                    </ul>
-                    <code>
-                        &lt;!DOCTYPE html&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        &lt;html&gt; Element: <br>
-                    </span>
-                    <ul>
-                        <li>The root element that encapsulates the entire HTML document.</li>
-                    </ul>
-                    <code>
-                        &lt;html&gt; <br>
-                        <span class="indent">&lt;!-- html elements go here --&gt;<br></span>
-                        &lt;/html&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        &lt;head&gt; Element: <br>
-                    </span>
-                    <ul>
-                        <li>Contains metadata and links to external resources, such as stylesheets and scripts.</li>
-                    </ul>
-                    <code>
-                        &lt;head&gt; <br>
-                        <span class="indent">&lt;title&gt;Page title &lt;/title&gt;</span> <br>
-                        <span class="indent">&lt;meta charset="UTF-8"&gt; </span> <br>
-                        <span class="indent">&lt;link rel="stylesheet" href="styles.css"&gt;</span> <br>
-                        &lt;/head&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        &lt;body&gt; Section <br>
-                    </span>
-                    <ul>
-                        <li>Contains the content of the HTML document, including text, images, links, and other elements.</li>
-                    </ul>
-                    <code>
-                        &lt;body&gt; <br>
-                        <span class="indent">&lt;h1&gt; Hello World! &lt;/h1&gt; <br></span>
-                        <span class="indent">&lt;p&gt; This is a simple message &lt;/p&gt; <br></span>
-                        &lt;/body&gt;
-                    </code>
-                </li>
-            </ol>
-
-            <br>
-
-            <!-- Head Section -->
-            <span class="bold">Head Section:</span>
-            <p>The <span class="bold">&lt;head&gt;</span> section is used to provide meta-information and include external resources that enhance the presentation and functionality of the webpage. Key elements within the <span class="bold">&lt;head&gt;</span> section include:</p>
-
-            <ul>
-                <li>
-                    <span class="bold">
-                        &lt;title&gt; Element:
-                    </span>
-                    <ul>
-                        <li>Sets the title of the HTML document, which is displayed on the browser tab or window.</li>
-                    </ul>
-                    <code>
-                        &lt;title&gt;Page Title&lt;/title&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        &lt;meta&gt; Element:
-                    </span>
-                    <ul>
-                        <li>Provides metadata, such as character set, viewport settings, or other information.</li>
-                    </ul>
-                    <code>
-                        &lt;meta charset="UTF-8"&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        &lt;link&gt; Element:
-                    </span>
-                    <ul>
-                        <li>Links external resources, such as stylesheets or icon files.</li>
-                    </ul>
-                    <code>
-                        &lt;link rel="stylesheet" href="styles.css"&gt;
-                    </code>
-                </li>
-            </ul>
-
-            <br>
-            
-            <!-- Body Section -->
-            <span class="bold">Body Section:</span>
-            <p>The <span class="bold">&lt;body&gt;</span> section contains the actual content of the HTML document, visible to users when they visit the webpage. Key elements within the <span class="bold">&lt;body&gt;</span> section include:</p>
-
-            <ul>
-                <li>
-                    <span class="bold">
-                        Headings: (&lt;h1&gt; to &lt;h6&gt;):
-                    </span>
-                    <ul>
-                        <li>Define hierarchical headings with <span class="bold">&lt;h1&gt;</span> being the highest level and <span class="bold">&lt;h6&gt;</span> the lowest.</li>
-                    </ul>
-                    <code>
-                        &lt;h1&gt;Main Heading&lt;/h1&gt;
-                        <br>
-                        &lt;h6&gt;Subheading&lt;/h6&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Paragraphs (&lt;p&gt;):
-                    </span>
-                    <ul>
-                        <li>Create paragraphs of text.</li>
-                    </ul>
-                    <code>
-                        &lt;p&gt;This is a paragraph of text&lt;/p&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Links (&lt;a&gt;):
-                    </span>
-                    <ul>
-                        <li>Create hyperlinks to navigate to other web pages.</li>
-                    </ul>
-                    <code>
-                        &lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Images (&lt;img&gt;):
-                    </span>
-                    <ul>
-                        <li>Embed images into the document.</li>
-                    </ul>
-                    <code>
-                        &lt;img src="image.jpg" alt="Description of the image"&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;):
-                    </span>
-                    <ul>
-                        <li>Create unordered or ordered lists with list items.</li>
-                    </ul>
-                    <code>
-                        &lt;ul&gt; <br>
-                        <span class="indent">
-                            &lt;li&gt;Item 1&lt;/li&gt; <br>
-                        </span>
-                        <span class="indent">
-                            &lt;li&gt;Item 2&lt;/li&gt; <br>
-                        </span>
-                        &lt;ul&gt; <br>
-
-                        <br>
-
-                        &lt;ol&gt; <br>
-                        <span class="indent">
-                            &lt;li&gt;First&lt;/li&gt; <br>
-                        </span>
-                        <span class="indent">
-                            &lt;li&gt;Second&lt;/li&gt; <br>
-                        </span>
-                        &lt;ol&gt; <br>
-                    </code>
-                </li>
-            </ul>
-            <p>This documentation provides an overview of the HTML document structure, the purpose of the <span class="bold">&lt;head&gt;</span> and <span class="bold">&lt;body&gt;</span> sections, and key elements within each section. The actual content and structure of an HTML document may vary based on the specific requirements of the webpage.
-
-            </p>
-
-            <br>
-
-            <!-- Forms and Input Elements -->
-            <h2 class="sub-title" id="form-input-elements">Forms and Input Elements</h2>
-
-            <p>
-                HTML provides a set of elements to create forms, collect user input, and facilitate interaction on web pages. The following documentation covers form elements, input types, attributes, and validation
-            </p>
-
-            <br>
-
-            <!-- Forms -->
-            <span class="bold">Form Element (&lt;form&gt;):</span>
-            <p>The <span class="bold">&lt;form&gt;</span> element is used to create an HTML form that allows users to input data.</p>
-
-            <br>
-
-            <span class="bold">Attributes</span>
-            <ul>
-                <li>
-                    <span class="bold">
-                        action (optional):<br>
-                    </span>
-                    <ul>
-                        <li>Specifies the URL to which the form data should be submitted.</li>
-                        <li>Example: <span class="bold">&lt;form action="/submit" method="post"&gt;</span></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        method (optional):<br>
-                    </span>
-                    <ul>
-                        <li>Specifies the HTTP method for sending form data (e.g., "get" or "post").</li>
-                        <li>Example: <span class="bold">&lt;form action="/submit" method="post"&gt;</span></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        target (optional):<br>
-                    </span>
-                    <ul>
-                        <li>Specifies where to display the response after submitting the form (e.g., "_blank" for a new tab).</li>
-                        <li>Example: <span class="bold">&lt;form action="/submit" method="post" target="_blank"&gt;</span></li>
-                    </ul>
-                    
-                    
-                </li>
-            </ul>
-            <br>
-            <span class="bold">Usage:</span>
-            <p>Form example:</p>
-
-            <code>
-                &lt;form action="/submit" method="post"&gt; <br>
-                    <span class="indent">&lt;!-- Form elements go here --&gt;<br></span>
-                &lt;/form&gt;
-            </code>
-            <br>
-
-            <!-- Input -->
-            <span class="bold">Input Elements (&lt;input&gt;):</span>
-            <p>The <span class="bold">&lt;input&gt;</span> element is a versatile element used to create various types of form controls.</p>
-            <br>
-
-            <span class="bold">Common Attributes:</span>
-            <ul>
-                <li>
-                    <span class="bold">type:<br></span>
-                    <ul>
-                        <li>Specifies the type of input control (e.g., text, password, checkbox).<br></li>
-                        <li>Example: <span class="bold">&lt;input type="text"&gt;</span></li>
-                    </ul>    
-                </li>
-                <li>
-                    <span class="bold">name:<br></span>
-                    <ul>
-                        <li>Assigns a name to the input control, used when submitting form data.<br></li>
-                        <li>Example: <span class="bold">&lt;input type="text" name="username"&gt;</span></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="bold">value:<br></span>
-                    <ul>
-                        <li>Sets the initial or default value of the input control.<br></li>
-                        <li>Example: <span class="bold">&lt;input type="text" value="John Doe"&gt;</span></li>
-                    </ul>
-                </li>
-            </ul>
-            <br>
-            <span class="bold">Input Types:</span>
-            <ol>
-                <li>
-                    <span class="bold">
-                        Text Input (type="text"):
-                    </span>
-                    <code>
-                        &lt;input type="text" name="username" placeholder="Enter your username"&gt;
-
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Password Input (type="password"):
-                    </span>
-                    <code>
-                        &lt;input type="password" name="password" placeholder="Enter your password"&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Checkbox (type="checkbox"):
-                    </span>
-                    <code>
-                        &lt;input type="checkbox" name="subscribe" value="yes"&gt; Subscribe to newsletter
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Radio (type="radio"):
-                    </span>
-                    <code>
-                        &lt;input type="radio" name="gender" value="male"&gt; Male
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        Submit Button (type="submit"):
-                    </span>
-                    <code>
-                        &lt;input type="radio" name="gender" value="female"&gt; Female
-                    </code>
-                </li>
-            </ol>
-            <br>
-            <span class="bold">Validation:</span>
-            <p>HTML5 introduces native form validation using attributes like <span class="bold">required, pattern, and more</span>.</p>
-            <ul>
-                <li>
-                    <span class="bold">
-                        required:
-                    </span>
-                    <ul>
-                        <li>Specifies that the input field must be filled out before submitting the form.</li>
-                    </ul>
-                    <code>
-                          &lt;input type="text" name="fullname" required&gt;          
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">
-                        pattern:
-                    </span>
-                    <ul>
-                        <li>Specifies a regular expression pattern that the input value must match.</li>
-                    </ul>
-                    <code>
-                        &lt;input type="text" name="zipcode" pattern="[0-9]{5}" title="Enter a valid 5-digit zip code"&gt;
-                    </code>
-                </li>
-            </ul>
-            <p>This documentation provides an overview of the <span class="bold">&lt;form&gt;</span> element, common attributes for <span class="bold">&lt;input&gt;</span> elements, various input types, and basic form validation using HTML attributes. For more advanced validation and behavior, JavaScript can be employed.</p>
-            
-            <br>
-
-            <!-- Semantic HTML -->
-            <h2 class="sub-title" id="semantic-html">Semantic HTML:</h2>
-            <p>Semantic HTML refers to the practice of using HTML elements that carry meaning about the structure and content of a web page, making it more understandable for both browsers and developers. By choosing semantic elements, you improve accessibility, search engine optimization (SEO), and overall maintainability of your code.</p>
-
-            <br>
-
-            <span class="bold">Semantic Elements:</span>
-            <ol>
-                <li>
-                    Header Element(<span class="bold">&lt;header&gt;</span>):
-                    <ul>
-                        <li>Represents introductory content or a group of navigation links.</li>
-                        <li>Use it to define the header section of a page, containing logos, navigation, and headings.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;header&gt; <br>
-                        <span class="indent">&lt;h1&gt;Website Title&lt;/h1&gt; <br></span>
-                        <span class="indent">&lt;nav&gt; <br></span>
-                        <span class="double-indent">&lt;ul&gt; <br></span>
-                        <span class="triple-indent">&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="triple-indent">&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="triple-indent">&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="double-indent">&lt;/ul&gt; <br></span>
-                        <span class="indent">&lt;/nav&gt; <br></span>
-                        &lt;/header&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Navigation Elements(<span class="bold">&lt;nav&gt;</span>):
-                    <ul>
-                        <li>Represents a section of navigation links.</li>
-                        <li>Use it to enclose a set of navigation links, menus, or lists.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;nav&gt; <br>
-                        <span class="indent">&lt;ul&gt; <br></span>
-                        <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="indent">&lt;/ul&gt; <br></span>
-                        &lt;/nav&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Main Content Elements(<span class="bold">&lt;main&gt;</span>):
-                    <ul>
-                        <li>Represents the main content of the document.</li>
-                        <li>Use it to encapsulate the primary content of the webpage.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;main&gt; <br>
-                        <span class="indent">&lt;article&gt; <br></span>
-                        <span class="double-indent">&lt;h2&gt;Article Title&lt;/h2&gt; <br></span>
-                        <span class="double-indent">&lt;p&gt;Article content goes here.&lt;/p&gt; <br></span>
-                        <span class="indent">&lt;/article&gt; <br></span>
-                        &lt;/main&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Article Elements(<span class="bold">&lt;article&gt;</span>):
-                    <ul>
-                        <li>Represents a self-contained piece of content.</li>
-                        <li>Use it for blog posts, news articles, or any independent content.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;article&gt; <br>
-                        <span class="indent">&lt;h2&gt;Blog Post Title&lt;/h2&gt; <br></span>
-                        <span class="indent">&lt;p&gt;Blog post content...&lt;/p&gt; <br></span>
-                        &lt;/article&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Section Elements(<span class="bold">&lt;section&gt;</span>):
-                    <ul>
-                        <li>Represents a generic section of content.</li>
-                        <li>Use it to group related content within the document.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;section&gt; <br>
-                        <span class="indent">&lt;h2&gt;Section Title&lt;/h2&gt; <br></span>
-                        <span class="indent">&lt;p&gt;Section content...&lt;/p&gt; <br></span>
-                        &lt;/section&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Aside(<span class="bold">&lt;aside&gt;</span>):
-                    <ul>
-                        <li>Represents content that is tangentially related to the content around it.</li>
-                        <li>Use it for sidebars or content like related links.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;aside&gt; <br>
-                        <span class="indent">&lt;h3&gt;Related Links&lt;/h3&gt; <br></span>
-                        <span class="indent">&lt;ul&gt; <br></span>
-                        <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt; <br></span>
-                        <span class="indent">&lt;/ul&gt; <br></span>
-                        &lt;/aside&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Footer Elements(<span class="bold">&lt;footer&gt;</span>):
-                    <ul>
-                        <li>Represents content that is tangentially related to the content around it.</li>
-                        <li>Use it for sidebars or content like related links.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;footer&gt; <br>
-                        <span class="indent">&lt;p&gt;&copy; 2023 Your Website | Contact: info@example.com&lt;/p&gt; <br></span>
-                        &lt;/footer&gt;                          
-                    </code>
-                </li>
-            </ol>
-
-            <br>
-
-            <span class="bold">Accessibility and SEO Benefits:</span>
-            <ol>
-                <li>
-                    <span class="bold">Accessibility:</span>
-                    <ul>
-                        <li>Screen readers and assistive technologies rely on semantic HTML to provide meaningful information to users.</li>
-                        <li>Semantic elements help create a clear document structure, making it easier for all users to navigate and understand content.</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <span class="bold">SEO (Search Engine Optimization):</span>
-                    <ul>
-                        <li>Search engines give more weight to content within semantic elements, improving the page's ranking.</li>
-                        <li>Proper use of headings <span class="bold">(&lt;h1&gt; to &lt;h6&gt;), &lt;title&gt;</span>, and structured content enhances search engine readability.</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <span class="bold">Maintainability:</span>
-                    <ul>
-                        <li>Semantic HTML improves code maintainability by making it more readable and understandable for developers.</li>
-                        <li>It helps other developers quickly grasp the structure and purpose of each section.</li>
-                    </ul>
-                </li>
-            </ol>
-            <p>By incorporating semantic HTML elements into your web pages, you contribute to a more accessible, search engine-friendly, and maintainable web presence.</p>
-
-            <br>
-
-            <!-- Multimedia -->
-            <h2 class="sub-title" id="html-multimedia">Multimedia:</h2>
-            <p>HTML provides elements to seamlessly embed images, audio, and video content within web pages. This documentation covers the attributes and best practices associated with multimedia elements.</p>
-
-            <br>
-
-            <ol>
-                <li>
-                    Image Element (<span class="bold">&lt;img&gt;</span>): 
-                    <br>
-                    <br>
-                    <span class="bold">Attributes:</span>
-                    <ul>
-                        <li>
-                            <span class="bold">src (required):</span>
-                            <ul>
-                                <li>Specifies the source URL of the image.</li>
-                                <li>Example: <span class="bold">&lt;img src="image.jpg"&gt;</span></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="bold">alt (recommended):</span>
-                            <ul>
-                                <li>Provides alternative text for the image, important for accessibility.</li>
-                                <li>Example: <span class="bold">&lt;img src="image.jpg" alt="Description of the image"&gt;</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Best Practices:</span>
-                    <ul>
-                        <li>Always use descriptive <span class="bold">alt</span> text for images to enhance accessibility and provide context in case the image cannot be loaded.</li>
-                        <li>Use meaningful file names and provide appropriate dimensions to optimize rendering.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;img src="example.jpg" alt="A beautiful landscape"&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Audio Element(<span class="bold">&lt;audio&gt;</span>):
-                    <br>
-                    <br>
-                    <span class="bold">Attributes:</span>
-                    <ul>
-                        <li>
-                            <span class="bold">src (required):</span>
-                            <ul>
-                                <li>Specifies the source URL of the audio file.</li>
-                                <li>Example: <span class="bold">&lt;audio src="audio.mp3"&gt;&lt;/audio&gt;</span></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="bold">controls (optional):</span>
-                            <ul>
-                                <li>Adds playback controls, allowing users to play, pause, and adjust volume.</li>
-                                <li>Example: <span class="bold">&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Best Practices:</span>
-                    <ul>
-                        <li>Include the <span class="bold">controls</span> attribute to provide a user-friendly interface for audio playback.</li>
-                        <li>Offer alternative text or a download link for users who cannot access or play the audio content.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;audio src="background-music.mp3" controls&gt;&lt;/audio&gt;
-                    </code>
-                </li>
-
-                <li>
-                    Video Element(<span class="bold">&lt;video&gt;</span>):
-                    <br>
-                    <br>
-                    <span class="bold">Attributes:</span>
-                    <ul>
-                        <li>
-                            <span class="bold">src (required):</span>
-                            <ul>
-                                <li>Specifies the source URL of the video file.</li>
-                                <li>Example: <span class="bold">&lt;video src="video.mp4"&gt;&lt;/video&gt;</span></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="bold">controls (optional):</span>
-                            <ul>
-                                <li>Adds playback controls, allowing users to play, pause, and adjust volume.</li>
-                                <li>Example: <span class="bold">&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</span></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Best Practices:</span>
-                    <ul>
-                        <li>Use the <span class="bold">controls</span> attribute to enhance user experience with video playback controls.</li>
-                        <li>Provide alternative video formats (e.g., WebM, Ogg) to ensure compatibility across different browsers.</li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;video src="presentation.mp4" controls&gt;&lt;/video&gt;
-                    </code>
-                </li>
-            </ol>
-
-            <br>
-
-            <span class="bold">Summary:</span>
-            <ul>
-                <li>
-                    <span class="bold">Images(&lt;img&gt;)</span>
-                    <ul>
-                        <li>Use <span class="bold">src</span> to specify the image source.</li>
-                        <li>Provide meaningful <span class="bold">alt</span> text for accessibility.</li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="bold">Audio(&lt;audio&gt;)</span>
-                    <ul>
-                        <li>Use <span class="bold">src</span> for the audio source.</li>
-                        <li>Include the <span class="bold">controls</span> attribute for playback control.</li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="bold">Video(&lt;video&gt;)</span>
-                    <ul>
-                        <li>Utilize <span class="bold">src</span> for the video source.</li>
-                        <li>Incorporate the <span class="bold">controls</span> attribute for playback control.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>By following these attributes and best practices, you can enhance the accessibility and user experience of multimedia content on your web pages. Always consider the needs of users with different abilities and ensure compatibility across various devices and browsers.</p>
-
-            <br>
-
-            <!-- HTML5 Features -->
-            <h2 class="sub-title" id="html5-feature">HTML5 Features</h2>
-            <p>HTML5, the fifth version of the Hypertext Markup Language, introduces several new features that enhance web development, multimedia capabilities, and user experience. This documentation covers some prominent HTML5 features, including Canvas, SVG, and Local Storage.</p>
-
-            <br>
-
-            <ol>
-                <li>
-                    <span class="bold">Canvas Element:</span> <br>
-                    <p>The <span class="bold">&lt;canvas&gt;</span> element in HTML5 provides a drawing space for graphics and dynamic content.</p>
-                    <span class="bold">Attributes</span>
-                    <ul>
-                        <li>
-                            <span class="bold">width and height:</span>
-                            <ul>
-                                <li>Specify the dimensions of the canvas.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;canvas id="myCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
-                    </code>
-                    <span class="bold">JavaScript Usage:</span>
-                    <code>
-                        const canvas = document.getElementById('myCanvas'); <br>
-                        const ctx = canvas.getContext('2d');<br>
-                        <br>
-                        // Drawing operations go here
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">SVG (Scalable Vector Graphics):</span>
-                    <p>SVG is a vector image format that can be embedded directly into HTML5 documents.</p>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;svg width="100" height="100"&gt; <br>
-                        <span class="indent">&lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt; <br></span>
-                        &lt;/svg&gt;
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">Local Storage:</span>
-                    <p>HTML5 introduces the localStorage object, providing a simple key-value storage mechanism in the browser.</p>
-                    <span class="bold">JavaScript Usage:</span>
-                    <code>
-                        // Storing data <br>
-                        localStorage.setItem('username', 'john_doe'); <br>
-                        <br>
-                        // Retrieving data <br>
-                        const username = localStorage.getItem('username');
-                    </code>
-                </li>
-
-                <li>
-                    <span class="bold">New Structural Elements:</span>
-                    <p>HTML5 introduces semantic and structural elements for better document structure.</p>
-                    <ul>
-                        <li>
-                            <span class="bold">  &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, and &lt;footer&gt;</span>
-                            <ul>
-                                <li>Enhance document structure and semantics.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Examples</span>
-                    <code>
-                        &lt;header&gt; <br>
-                        <span class="indent">&lt;h1&gt;Website Title&lt;/h1&gt; <br></span>
-                        &lt;/header&gt; <br>
-                         <br>
-                        &lt;nav&gt; <br>
+            <!-- ----------Semantic HTML---------- -->
+            <article id="semantic-html">
+
+                <!-- Subtitle & Description -->
+                <h2 class="sub-title">Semantic HTML:</h2>
+                <p>
+                    Semantic HTML refers to the practice of using HTML elements that carry meaning about the structure and content of a web page, making it more understandable for both browsers and developers. By choosing semantic elements, you improve accessibility, search engine optimization (SEO), and overall maintainability of your code.
+                </p>
+    
+                <br>
+    
+                <!-- ELements -->
+                <span class="bold">Semantic Elements:</span>
+                <ol>
+                    <li>
+                        Header Element(<span class="bold">&lt;header&gt;</span>):
+                        <ul>
+                            <li>Represents introductory content or a group of navigation links.</li>
+                            <li>Use it to define the header section of a page, containing logos, navigation, and headings.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;header&gt; <br>
+                            <span class="indent">&lt;h1&gt;Website Title&lt;/h1&gt; <br></span>
+                            <span class="indent">&lt;nav&gt; <br></span>
+                            <span class="double-indent">&lt;ul&gt; <br></span>
+                            <span class="triple-indent">&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="triple-indent">&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="triple-indent">&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="double-indent">&lt;/ul&gt; <br></span>
+                            <span class="indent">&lt;/nav&gt; <br></span>
+                            &lt;/header&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Navigation Elements(<span class="bold">&lt;nav&gt;</span>):
+                        <ul>
+                            <li>Represents a section of navigation links.</li>
+                            <li>Use it to enclose a set of navigation links, menus, or lists.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;nav&gt; <br>
                             <span class="indent">&lt;ul&gt; <br></span>
                             <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; <br></span>
-                            <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt; <br></span>
                             <span class="indent">&lt;/ul&gt; <br></span>
-                        &lt;/nav&gt; <br>
-                         <br>
-                        &lt;main&gt; <br>
-                        <span class="indent">&lt;article&gt; <br></span>
-                        <span class="double-indent">&lt;h2&gt;Article Title&lt;/h2&gt; <br></span>
-                        <span class="double-indent">&lt;p&gt;Article content goes here.&lt;/p&gt; <br></span>
-                        <span class="indent">&lt;/article&gt; <br></span>
-                        &lt;/main&gt; <br>
-                         <br>
-                        &lt;footer&gt; <br>
-                        <span class="double-indent">&lt;p&gt;&copy; 2023 Your Website&lt;/p&gt; <br></span>
-                        &lt;/footer&gt;
-                    </code>
-                </li>
+                            &lt;/nav&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Main Content Elements(<span class="bold">&lt;main&gt;</span>):
+                        <ul>
+                            <li>Represents the main content of the document.</li>
+                            <li>Use it to encapsulate the primary content of the webpage.</li>
+                        </ul>
 
-                <li>
-                    <span class="bold">New Form Input Types:</span>
-                    <p>HTML5 introduces new input types for improved user input.</p>
-                    <ul>
-                        <li>
-                            <span class="bold">&lt;input type="email"&gt;, &lt;input type="url"&gt;, and &lt;input type="date"&gt;</span>
-                            <ul>
-                                <li>Provide specialized input fields for email, URL, and date.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;form&gt; <br>
-                        <span class="indent">&lt;label&gt;Email: &lt;input type="email" name="user_email"&gt;&lt;/label&gt; <br></span>
-                        <span class="indent">&lt;label&gt;URL: &lt;input type="url" name="website_url"&gt;&lt;/label&gt; <br></span>
-                        <span class="indent">&lt;label&gt;Date: &lt;input type="date" name="event_date"&gt;&lt;/label&gt; <br></span>
-                        <span class="indent">&lt;input type="submit" value="Submit"&gt; <br></span>
-                        &lt;/form&gt;
-                    </code>
-                </li>
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;main&gt; <br>
+                            <span class="indent">&lt;article&gt; <br></span>
+                            <span class="double-indent">&lt;h2&gt;Article Title&lt;/h2&gt; <br></span>
+                            <span class="double-indent">&lt;p&gt;Article content goes here.&lt;/p&gt; <br></span>
+                            <span class="indent">&lt;/article&gt; <br></span>
+                            &lt;/main&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Article Elements(<span class="bold">&lt;article&gt;</span>):
+                        <ul>
+                            <li>Represents a self-contained piece of content.</li>
+                            <li>Use it for blog posts, news articles, or any independent content.</li>
+                        </ul>
 
-                <li>
-                    <span class="bold">Audio and Video Elements:</span>
-                    <p>HTML5 includes native support for embedding audio and video content.</p>
-                    <ul>
-                        <li>
-                            <span class="bold">&lt;audio&gt;&lt; and &lt;video&gt;&lt;</span>
-                            <ul>
-                                <li>Allow direct embedding of multimedia content.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="bold">Example:</span>
-                    <code>
-                        &lt;audio controls&gt; <br>
-                        <span class="indent">&lt;source src="audio.mp3" type="audio/mp3"&gt; <br></span>
-                        <span class="indent">Your browser does not support the audio element. <br></span>
-                        &lt;/audio&gt; <br>
-                        <br>    
-                        &lt;video controls width="320" height="240"&gt; <br>
-                        <span class="indent">&lt;source src="movie.mp4" type="video/mp4"&gt; <br></span>
-                        <span class="indent">Your browser does not support the video tag. <br></span>
-                        &lt;/video&gt;
-                    </code>
-                </li>
-            </ol>
-            <p>HTML5 brings these and many other features that enhance the capabilities of web development. Developers can leverage these features to create more interactive, multimedia-rich, and accessible web applications.</p>
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;article&gt; <br>
+                            <span class="indent">&lt;h2&gt;Blog Post Title&lt;/h2&gt; <br></span>
+                            <span class="indent">&lt;p&gt;Blog post content...&lt;/p&gt; <br></span>
+                            &lt;/article&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Section Elements(<span class="bold">&lt;section&gt;</span>):
+                        <ul>
+                            <li>Represents a generic section of content.</li>
+                            <li>Use it to group related content within the document.</li>
+                        </ul>
 
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;section&gt; <br>
+                            <span class="indent">&lt;h2&gt;Section Title&lt;/h2&gt; <br></span>
+                            <span class="indent">&lt;p&gt;Section content...&lt;/p&gt; <br></span>
+                            &lt;/section&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Aside(<span class="bold">&lt;aside&gt;</span>):
+                        <ul>
+                            <li>Represents content that is tangentially related to the content around it.</li>
+                            <li>Use it for sidebars or content like related links.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;aside&gt; <br>
+                            <span class="indent">&lt;h3&gt;Related Links&lt;/h3&gt; <br></span>
+                            <span class="indent">&lt;ul&gt; <br></span>
+                            <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt; <br></span>
+                            <span class="indent">&lt;/ul&gt; <br></span>
+                            &lt;/aside&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Footer Elements(<span class="bold">&lt;footer&gt;</span>):
+                        <ul>
+                            <li>Represents content that is tangentially related to the content around it.</li>
+                            <li>Use it for sidebars or content like related links.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;footer&gt; <br>
+                            <span class="indent">&lt;p&gt;&copy; 2023 Your Website | Contact: info@example.com&lt;/p&gt; <br></span>
+                            &lt;/footer&gt;                          
+                        </code>
+                    </li>
+                </ol>
+    
+                <br>
+    
+                <!-- Accessibility & SEO Benefits -->
+                <span class="bold">Accessibility and SEO Benefits:</span>
+                <ol>
+                    <li>
+                        <span class="bold">Accessibility:</span>
+                        <ul>
+                            <li>Screen readers and assistive technologies rely on semantic HTML to provide meaningful information to users.</li>
+                            <li>Semantic elements help create a clear document structure, making it easier for all users to navigate and understand content.</li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <span class="bold">SEO (Search Engine Optimization):</span>
+                        <ul>
+                            <li>Search engines give more weight to content within semantic elements, improving the page's ranking.</li>
+                            <li>Proper use of headings <span class="bold">(&lt;h1&gt; to &lt;h6&gt;), &lt;title&gt;</span>, and structured content enhances search engine readability.</li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <span class="bold">Maintainability:</span>
+                        <ul>
+                            <li>Semantic HTML improves code maintainability by making it more readable and understandable for developers.</li>
+                            <li>It helps other developers quickly grasp the structure and purpose of each section.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <!-- Summary -->
+                <p>
+                    By incorporating semantic HTML elements into your web pages, you contribute to a more accessible, search engine-friendly, and maintainable web presence.
+                </p>
+            </article>
+
+
+            <!-- ----------Multimedia---------- -->
+            <article id="html-multimedia">
+
+                <!-- Subtitle & Description -->
+                <h2 class="sub-title">Multimedia:</h2>
+                <p>HTML provides elements to seamlessly embed images, audio, and video content within web pages. This documentation covers the attributes and best practices associated with multimedia elements.</p>
+    
+                <br>
+    
+                <ol>
+                    <li>
+                        Image Element (<span class="bold">&lt;img&gt;</span>): 
+                        <br>
+                        <br>
+
+                        <span class="bold">Attributes:</span>
+                        <ul>
+                            <li>
+                                <span class="bold">src (required):</span>
+                                <ul>
+                                    <li>Specifies the source URL of the image.</li>
+                                    <li>Example: <span class="bold">&lt;img src="image.jpg"&gt;</span></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <span class="bold">alt (recommended):</span>
+                                <ul>
+                                    <li>Provides alternative text for the image, important for accessibility.</li>
+                                    <li>Example: <span class="bold">&lt;img src="image.jpg" alt="Description of the image"&gt;</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Best Practices:</span>
+                        <ul>
+                            <li>Always use descriptive <span class="bold">alt</span> text for images to enhance accessibility and provide context in case the image cannot be loaded.</li>
+                            <li>Use meaningful file names and provide appropriate dimensions to optimize rendering.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;img src="example.jpg" alt="A beautiful landscape"&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Audio Element(<span class="bold">&lt;audio&gt;</span>):
+                        <br>
+                        <br>
+
+                        <span class="bold">Attributes:</span>
+                        <ul>
+                            <li>
+                                <span class="bold">src (required):</span>
+                                <ul>
+                                    <li>Specifies the source URL of the audio file.</li>
+                                    <li>Example: <span class="bold">&lt;audio src="audio.mp3"&gt;&lt;/audio&gt;</span></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <span class="bold">controls (optional):</span>
+                                <ul>
+                                    <li>Adds playback controls, allowing users to play, pause, and adjust volume.</li>
+                                    <li>Example: <span class="bold">&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Best Practices:</span>
+                        <ul>
+                            <li>Include the <span class="bold">controls</span> attribute to provide a user-friendly interface for audio playback.</li>
+                            <li>Offer alternative text or a download link for users who cannot access or play the audio content.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;audio src="background-music.mp3" controls&gt;&lt;/audio&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        Video Element(<span class="bold">&lt;video&gt;</span>):
+                        <br>
+                        <br>
+
+                        <span class="bold">Attributes:</span>
+                        <ul>
+                            <li>
+                                <span class="bold">src (required):</span>
+                                <ul>
+                                    <li>Specifies the source URL of the video file.</li>
+                                    <li>Example: <span class="bold">&lt;video src="video.mp4"&gt;&lt;/video&gt;</span></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <span class="bold">controls (optional):</span>
+                                <ul>
+                                    <li>Adds playback controls, allowing users to play, pause, and adjust volume.</li>
+                                    <li>Example: <span class="bold">&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Best Practices:</span>
+                        <ul>
+                            <li>Use the <span class="bold">controls</span> attribute to enhance user experience with video playback controls.</li>
+                            <li>Provide alternative video formats (e.g., WebM, Ogg) to ensure compatibility across different browsers.</li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;video src="presentation.mp4" controls&gt;&lt;/video&gt;
+                        </code>
+                    </li>
+                </ol>
+    
+                <br>
+    
+                <!-- Summary -->
+                <span class="bold">Summary:</span>
+                <ul>
+                    <li>
+                        <span class="bold">Images(&lt;img&gt;)</span>
+                        <ul>
+                            <li>Use <span class="bold">src</span> to specify the image source.</li>
+                            <li>Provide meaningful <span class="bold">alt</span> text for accessibility.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="bold">Audio(&lt;audio&gt;)</span>
+                        <ul>
+                            <li>Use <span class="bold">src</span> for the audio source.</li>
+                            <li>Include the <span class="bold">controls</span> attribute for playback control.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="bold">Video(&lt;video&gt;)</span>
+                        <ul>
+                            <li>Utilize <span class="bold">src</span> for the video source.</li>
+                            <li>Incorporate the <span class="bold">controls</span> attribute for playback control.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>
+                    By following these attributes and best practices, you can enhance the accessibility and user experience of multimedia content on your web pages. Always consider the needs of users with different abilities and ensure compatibility across various devices and browsers.
+                </p>
+            </article>
+
+
+            <!-- ----------HTML5 Features---------- -->
+            <article id="html5-feature">
+
+                <!-- Subtitle & Description -->
+                <h2 class="sub-title">HTML5 Features</h2>
+                <p>HTML5, the fifth version of the Hypertext Markup Language, introduces several new features that enhance web development, multimedia capabilities, and user experience. This documentation covers some prominent HTML5 features, including Canvas, SVG, and Local Storage.</p>
+    
+                <br>
+    
+                <ol>
+                    <li>
+                        <span class="bold">Canvas Element:</span> <br>
+                        <p>The <span class="bold">&lt;canvas&gt;</span> element in HTML5 provides a drawing space for graphics and dynamic content.</p>
+
+                        <span class="bold">Attributes</span>
+                        <ul>
+                            <li>
+                                <span class="bold">width and height:</span>
+                                <ul>
+                                    <li>Specify the dimensions of the canvas.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;canvas id="myCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
+                        </code>
+
+                        <span class="bold">JavaScript Usage:</span>
+                        <code>
+                            const canvas = document.getElementById('myCanvas'); <br>
+                            const ctx = canvas.getContext('2d');<br>
+                            <br>
+                            // Drawing operations go here
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">SVG (Scalable Vector Graphics):</span>
+                        <p>SVG is a vector image format that can be embedded directly into HTML5 documents.</p>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;svg width="100" height="100"&gt; <br>
+                            <span class="indent">&lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt; <br></span>
+                            &lt;/svg&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">Local Storage:</span>
+                        <p>HTML5 introduces the localStorage object, providing a simple key-value storage mechanism in the browser.</p>
+
+                        <span class="bold">JavaScript Usage:</span>
+                        <code>
+                            // Storing data <br>
+                            localStorage.setItem('username', 'john_doe'); <br>
+                            <br>
+                            // Retrieving data <br>
+                            const username = localStorage.getItem('username');
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">New Structural Elements:</span>
+                        <p>HTML5 introduces semantic and structural elements for better document structure.</p>
+
+                        <ul>
+                            <li>
+                                <span class="bold">  &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, and &lt;footer&gt;</span>
+                                <ul>
+                                    <li>Enhance document structure and semantics.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Examples</span>
+                        <code>
+                            &lt;header&gt; <br>
+                            <span class="indent">&lt;h1&gt;Website Title&lt;/h1&gt; <br></span>
+                            &lt;/header&gt; <br>
+                             <br>
+                            &lt;nav&gt; <br>
+                                <span class="indent">&lt;ul&gt; <br></span>
+                                <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; <br></span>
+                                <span class="double-indent">&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt; <br></span>
+                                <span class="indent">&lt;/ul&gt; <br></span>
+                            &lt;/nav&gt; <br>
+                             <br>
+                            &lt;main&gt; <br>
+                            <span class="indent">&lt;article&gt; <br></span>
+                            <span class="double-indent">&lt;h2&gt;Article Title&lt;/h2&gt; <br></span>
+                            <span class="double-indent">&lt;p&gt;Article content goes here.&lt;/p&gt; <br></span>
+                            <span class="indent">&lt;/article&gt; <br></span>
+                            &lt;/main&gt; <br>
+                             <br>
+                            &lt;footer&gt; <br>
+                            <span class="double-indent">&lt;p&gt;&copy; 2023 Your Website&lt;/p&gt; <br></span>
+                            &lt;/footer&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">New Form Input Types:</span>
+                        <p>HTML5 introduces new input types for improved user input.</p>
+
+                        <ul>
+                            <li>
+                                <span class="bold">&lt;input type="email"&gt;, &lt;input type="url"&gt;, and &lt;input type="date"&gt;</span>
+                                <ul>
+                                    <li>Provide specialized input fields for email, URL, and date.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;form&gt; <br>
+                            <span class="indent">&lt;label&gt;Email: &lt;input type="email" name="user_email"&gt;&lt;/label&gt; <br></span>
+                            <span class="indent">&lt;label&gt;URL: &lt;input type="url" name="website_url"&gt;&lt;/label&gt; <br></span>
+                            <span class="indent">&lt;label&gt;Date: &lt;input type="date" name="event_date"&gt;&lt;/label&gt; <br></span>
+                            <span class="indent">&lt;input type="submit" value="Submit"&gt; <br></span>
+                            &lt;/form&gt;
+                        </code>
+                    </li>
+    
+                    <li>
+                        <span class="bold">Audio and Video Elements:</span>
+                        <p>HTML5 includes native support for embedding audio and video content.</p>
+
+                        <ul>
+                            <li>
+                                <span class="bold">&lt;audio&gt;&lt; and &lt;video&gt;&lt;</span>
+                                <ul>
+                                    <li>Allow direct embedding of multimedia content.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <span class="bold">Example:</span>
+                        <code>
+                            &lt;audio controls&gt; <br>
+                            <span class="indent">&lt;source src="audio.mp3" type="audio/mp3"&gt; <br></span>
+                            <span class="indent">Your browser does not support the audio element. <br></span>
+                            &lt;/audio&gt; <br>
+                            <br>    
+                            &lt;video controls width="320" height="240"&gt; <br>
+                            <span class="indent">&lt;source src="movie.mp4" type="video/mp4"&gt; <br></span>
+                            <span class="indent">Your browser does not support the video tag. <br></span>
+                            &lt;/video&gt;
+                        </code>
+                    </li>
+                </ol>
+
+                <!-- Summary -->
+                <p>
+                    HTML5 brings these and many other features that enhance the capabilities of web development. Developers can leverage these features to create more interactive, multimedia-rich, and accessible web applications.
+                </p>
+            </article>
         </section>
 
         <!--! ---------- CSS ---------- -->
