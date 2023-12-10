@@ -7,6 +7,24 @@ body {
     position: relative;
     font-size: 1.6rem;
     font-family: sans-serif;
+    background-color: black;
+    color: rgb(199, 199, 199);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* body Scrollbar styles */
+body::-webkit-scrollbar {
+    width: 15px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the color of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.256);
+    border-radius: 10px;
 }
 
 /*! Title styles */
@@ -15,54 +33,84 @@ body {
     position: relative;
     margin-left: auto;
     width: 66.66666%;
-    font-size: 6rem;
+    font-size: 7rem;
     text-align: center;
     transition: font-size 0.3s ease-out;
 }
 
 /*!Navigation bar styles */
 #navbar {
-    background: gray;
+    background: rgb(61, 61, 61);
     box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     width: 33.333333%;
     height: 100vh;
-    padding: 20px;
+    padding: 30px 60px;
+    overflow-y: scroll;
+}
+
+/* nav Scrollbar styles */
+#navbar::-webkit-scrollbar {
+    width: 15px; /* Set the width of the scrollbar */
+}
+
+#navbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the color of the track */
+}
+
+#navbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.256);
+    border-radius: 10px;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sub-nav {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.5s ease-in;
 }
 
 nav header h2{
-    text-align: center;
+    color: white;
     font-size: 5rem;
     transition: font-size 0.3s ease-out;
 }
 
-#navbar {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 60px;
-}
-
 .nav-link {
-    color: black;
+    color: white;
     font-size: 4rem;
     font-weight: 600;
     text-decoration: none;
-    margin-bottom: 30px;
 }
 
 .nav-sub-link {
-    color: black;
+    color: inherit;
     font-size: 3rem;
     text-decoration: none;
     margin-bottom: 30px;
     margin-left: 1em;
 }
 
+/* Show designated sub-nav when button is clicked */
+#html-sub-nav.show {
+    max-height: 500px; /* A sufficiently large value to accommodate content */
+    transition: max-height 0.5s; /* Transition effect for max-height */
+}
+  
 /*! Main page styles */
 #main-doc {
-    background-color: gray;
+    background-color: rgb(40, 40, 40);
     box-sizing: border-box;
     position: relative;
     width: 66.66666%;
@@ -72,23 +120,16 @@ nav header h2{
 }
 
 .main-title {
+    color: white;
     text-align: center;
     font-size: 6rem;
     transition: font-size 0.3s ease-out;
 }
 
 .sub-title {
+    color: white;
     font-size: 4rem;
     transition: font-size 0.3s ease-out;
-}
-
-/* Lists styles */
-ol {
-    list-style-type: decimal;
-}
-
-li {
-    margin-bottom: 10px;
 }
 
 /*! Other styles */
@@ -97,19 +138,64 @@ li {
 }
 
 .bold {
-    font-weight: bold;
+    color: white;
+    font-weight: 750;
+}
+
+.indent {
+    margin-left: 2em;
+}
+
+.double-indent {
+    margin: 4em;
+}
+
+.triple-indent {
+    margin: 6em;
+}
+
+li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+code {
+    display: block;
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    background-color: transparent;
+    padding: 20px 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+/*! Icon button styles */
+.arrow {
+    color: white;
+    margin: 0;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-button {
+    background-color: transparent;
+    border-radius: 100%;
+    border: 0;
 }
 
 /* Media Query */
-/* @media(max-width: 945px) {
-    #page-header h1{
-        font-size: 3.5rem;
+@media(max-width: 945px) {
+    #navbar {
+        position: relative;
     }
 
-    nav header h2, .main-section header h1{
-        font-size: 3rem;
+    #navbar, #main-doc, #page-header > h1 {
+        margin: 10px auto;
+        width: 100%;
     }
-} */
+}
 
 @media (prefers-reduced-motion: no-preference){ /* Check if user prefers reduced motion */
     * {
