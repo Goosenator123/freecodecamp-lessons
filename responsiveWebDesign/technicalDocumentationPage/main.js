@@ -146,3 +146,8 @@ pythonButton.addEventListener('click', function() {
 cPlusButton.addEventListener('click', function() {
     toggleSubNav('c++');
 });
+
+// Ensures that page start at the top
+window.onload = function() {
+    window.scrollTo(0, 0);
+}
