@@ -1,0 +1,130 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.wheel {
+    position: absolute;
+    width: 55vw;
+    height: 55vw;
+    max-width: 500px;
+    max-height: 500px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 50px;
+
+    /* Animations */
+    animation-name: wheel; /* Set name to link with a @keyframe rule */
+    animation-duration: 5s; /* Set a duration for the animation */
+    animation-timing-function: linear; /* Set the ferris wheel's animation to run at the same rate from start to finish */
+    animation-iteration-count: infinite; /* Set the animation to repeat forever */
+}
+
+.line {
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 2px;
+    transform-origin: 0% 50%; /* Set the origin to the left (transform-origin: x-axis, y-axis, z-axis; */
+}
+
+.line:nth-of-type(2) {
+    transform: rotate(60deg);
+}
+
+.line:nth-of-type(3) {
+    transform: rotate(120deg);
+}
+
+.line:nth-of-type(4) {
+    transform: rotate(180deg);
+}
+
+.line:nth-of-type(5) {
+    transform: rotate(240deg);
+}
+
+.line:nth-of-type(6) {
+    transform: rotate(300deg);
+}
+
+.cabin {
+    background-color: linen;
+    position: absolute;
+    border: 2px solid;
+    width: 20%;
+    height: 20%;
+    border-color: linen;
+    transform-origin: 50% 0%;
+
+    /* Animation */
+    animation: cabins 5s ease-in-out infinite; /* animation: name, duration, timing, count; */
+}
+
+.cabin:nth-of-type(1) {
+    right: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(2) {
+    right: 17%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(3) {
+    right: 67%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(4) {
+    left: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(5) {
+    left: 17%;
+    top: 7%;
+}
+
+.cabin:nth-of-type(6) {
+    right: 17%;
+    top: 7%;
+}
+
+/* Keyframe at-rule */
+@keyframes wheel { /* Define the flow of a css animation */
+    
+    /* Create selectors for specific points in the animation sequence */
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cabins {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: purple;
+    }
+
+    75% {
+        background-color: yellow;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
