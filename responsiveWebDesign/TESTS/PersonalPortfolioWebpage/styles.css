@@ -1,0 +1,11 @@
+#navbar {
+    position: fixed;
+    top: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: black;
+        font-size: 100px;
+    }
+}
