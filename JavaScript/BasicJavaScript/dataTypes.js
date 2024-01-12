@@ -182,6 +182,23 @@ delete person1.isStudent;
 console.log("Added City:", person1.city);
 console.log("Deleted Is Student:", person1.isStudent); // undefined
 
+
+// Testing Object Properties with hasOwnProperty()
+console.log("\n- Testing Object Properties with hasOwnProperty():");
+
+// Checking if the object has a direct property
+console.log("Has 'firstName':", person1.hasOwnProperty("firstName")); // true
+console.log("Has 'gender':", person1.hasOwnProperty("gender")); // false
+
+// Using hasOwnProperty() in a loop
+console.log("\n- Using hasOwnProperty() in a Loop:");
+
+for (let key in person1) {
+  if (person1.hasOwnProperty(key)) {
+    console.log(`Property '${key}' is directly owned by the object.`);
+  }
+}
+
 // Object Methods
 console.log("\n- Object Methods:");
 
@@ -262,3 +279,27 @@ delete person2.education;
 
 console.log("Deleted Phone:", person2["contacts"]["phone"]); // undefined
 console.log("Deleted Education Object:", person2.education); // undefined
+
+// Testing Object Properties with hasOwnProperty()
+console.log("\n- Testing Object Properties with hasOwnProperty():");
+
+// Checking if the object has a nested property
+console.log("Has 'address.street':", person2.hasOwnProperty("address.street")); // false
+console.log("Has 'street' nested in address property:", person2.address.hasOwnProperty("street")); // true
+
+// Using hasOwnProperty() in a loop
+console.log("\n- Using hasOwnProperty() in a Loop:");
+
+for (let key in person2) {
+  if (person2.hasOwnProperty(key)) {
+    console.log(`Property '${key}' is directly owned by the object.`);
+
+    if (typeof person2[key] === 'object') {
+      for (let subkey in person2[key]) {
+        if (person2[key].hasOwnProperty(subkey)) {
+          console.log(`   Property '${subkey}' is nested in '${key}'`)
+        }
+      }
+    }
+  }
+}
